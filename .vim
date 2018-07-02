@@ -1,0 +1,1 @@
+/home/tkm/.vim
