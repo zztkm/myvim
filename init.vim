@@ -1,18 +1,19 @@
 "My vimrc
-syntax on
+filetype plugin indent on
 
-filetype indent on
+"Theme
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+"syntax enable
+"colorscheme tender
 
 set number
 set expandtab
 set shiftwidth=2
 set tabstop=2
 set termguicolors
-
-" reset augroup
-augroup MyAutoCmd
-    autocmd!
-augroup END
 
 " ENV
 let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
@@ -22,6 +23,11 @@ let $DATA = empty($XDG_DATA_HOME) ? expand('$HOME/.local/share') : $XDG_DATA_HOM
 """""""""""""""
 "dein.vim setup
 """""""""""""""
+" reset augroup
+augroup MyAutoCmd
+    autocmd!
+augroup END
+
 "plugins install dir
 let s:dein_dir = expand('$DATA/dein')
 "dein.vim
