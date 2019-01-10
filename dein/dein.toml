@@ -2,7 +2,7 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
@@ -10,7 +10,7 @@ hook_post_update = '''
   if dein#util#_is_windows()
     let cmd = 'tools\\update-dll-mingw'
   elseif dein#util#_is_cygwin()
-    let cmd = 'make -f make_cygwin.mak'
+      let cmd = 'make -f make_cygwin.mak'
   elseif executable('gmake')
     let cmd = 'gmake'
   else
@@ -19,6 +19,7 @@ hook_post_update = '''
   let g:dein#plugin.build = cmd
 '''
 
+# 自動補完
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'let g:deoplete#enable_at_startup = 1'
@@ -44,14 +45,25 @@ hook_add='''
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
+#Git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+#ファイルエクスプローラー
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+#linter
+[[plugins]]
+repo = 'w0rp/ale'
+
+# ()補完
+[[plugins]]
+repo = 'cohama/lexima.vim'
 
 # Toml
 [[plugins]]
 repo  = 'cespare/vim-toml'
-
-# Golang
-[[plugins]]
-repo = 'fatih/vim-go'
 

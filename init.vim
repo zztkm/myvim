@@ -1,19 +1,28 @@
 "My vimrc
+
 filetype plugin indent on
 
+"NERDTreeToggle
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
 "Theme
-if (has("termguicolors"))
-  set termguicolors
-endif
+"if (has("termguicolors"))
+"  set termguicolors
+"endif
 
 "syntax enable
-"colorscheme tender
 
 set number
+set tabstop=4
+set shiftwidth=4
+set softtabstop=0
 set expandtab
-set shiftwidth=2
-set tabstop=2
+set smarttab
+set shiftround
 set termguicolors
+set cursorline
+set noswapfile
+set hidden
 
 " ENV
 let $CACHE = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
@@ -66,3 +75,7 @@ endif
 if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
+
+"Theme
+syntax on
+colorscheme onedark
