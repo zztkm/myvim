@@ -1,3 +1,3 @@
-# Neovim set up file
+# Neovim setup file
 ---
 
