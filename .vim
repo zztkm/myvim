@@ -1,1 +1,1 @@
-/home/tkm/.vim
+$HOME/.vim
